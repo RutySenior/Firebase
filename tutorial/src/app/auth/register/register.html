@@ -1,1 +1,15 @@
-<p>register works!</p>
+<h2>Registrazione</h2>
+
+<label>Email</label>
+<input type="email" [(ngModel)]="email" name="email" />
+
+<label>Password</label>
+<input type="password" [(ngModel)]="password" name="password" />
+
+<button (click)="register()">Registrati</button>
+
+<p *ngIf="errorMsg">{{ errorMsg }}</p>
+
+<p>Hai già un account?
+  <a routerLink="/login">Vai al login</a>
+</p>
